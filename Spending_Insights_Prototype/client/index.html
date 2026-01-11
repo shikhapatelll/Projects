@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spending Insights Prototype</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #f6f7fb; }
+    header { background: white; border-bottom: 1px solid #e7e7ef; padding: 16px 20px; }
+    header h1 { margin: 0; font-size: 18px; }
+    main { padding: 20px; max-width: 1100px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 900px){ .grid { grid-template-columns: 1fr 1fr; } }
+    .card { background: white; border: 1px solid #e7e7ef; border-radius: 12px; padding: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .metric { flex: 1; min-width: 160px; background: #fafbff; border: 1px solid #eef; border-radius: 10px; padding: 10px 12px; }
+    .metric .label { color: #555; font-size: 12px; }
+    .metric .value { font-size: 18px; font-weight: 650; margin-top: 4px; }
+    label { font-size: 12px; color: #444; display: block; margin-bottom: 6px; }
+    input[type="file"], input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 10px; }
+    button { padding: 10px 14px; border: 0; border-radius: 10px; background: #111827; color: white; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; font-size: 13px; padding: 8px; border-bottom: 1px solid #eee; }
+    .muted { color: #666; font-size: 12px; }
+    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background:#f1f5f9; font-size: 12px; }
+    .error { color: #b91c1c; }
+    .ok { color: #047857; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Spending Insights — Prototype</h1>
+    <div class="muted">Upload a CSV → view totals, categories, anomalies. API: <span class="pill" id="apiBasePill"></span></div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2 style="margin:0 0 10px 0; font-size: 16px;">1) Upload CSV</h2>
+        <div class="muted">Columns: <code>date</code>, <code>description</code>, <code>amount</code> (optional <code>category</code>).</div>
+        <div style="margin-top: 12px;">
+          <label for="file">Transactions CSV</label>
+          <input id="file" type="file" accept=".csv" />
+        </div>
+        <div class="row" style="margin-top: 12px; align-items:center;">
+          <button id="uploadBtn">Upload</button>
+          <span id="uploadStatus" class="muted"></span>
+        </div>
+        <div id="uploadError" class="error" style="margin-top:10px;"></div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin:0 0 10px 0; font-size: 16px;">2) Summary</h2>
+        <div class="row">
+          <div class="metric"><div class="label">Income</div><div class="value" id="incomeVal">—</div></div>
+          <div class="metric"><div class="label">Spending</div><div class="value" id="spendVal">—</div></div>
+          <div class="metric"><div class="label">Net</div><div class="value" id="netVal">—</div></div>
+          <div class="metric"><div class="label">Transactions</div><div class="value" id="countVal">—</div></div>
+        </div>
+        <div class="muted" id="dateRange" style="margin-top:10px;"></div>
+
+        <h3 style="margin:14px 0 8px 0; font-size: 14px;">Top merchants</h3>
+        <table id="merchantTable">
+          <thead><tr><th>Merchant</th><th>Total</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2 style="margin:0 0 10px 0; font-size: 16px;">3) Category breakdown</h2>
+        <canvas id="catChart" height="180"></canvas>
+        <div class="muted" style="margin-top:8px;">Spending displayed as positive values.</div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin:0 0 10px 0; font-size: 16px;">4) Anomalies (outliers)</h2>
+        <div class="row" style="align-items:center;">
+          <div style="flex:1; min-width: 160px;">
+            <label for="zInput">Z-score threshold</label>
+            <input id="zInput" type="text" value="2.5" />
+          </div>
+          <div style="margin-top: 18px;">
+            <button id="anomalyBtn">Refresh</button>
+          </div>
+        </div>
+        <table id="anomalyTable" style="margin-top:10px;">
+          <thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Spending</th><th>Z</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card" style="grid-column:1 / -1;">
+        <h2 style="margin:0 0 10px 0; font-size: 16px;">5) Search transactions</h2>
+        <div class="row" style="align-items:center;">
+          <div style="flex:1; min-width: 260px;">
+            <label for="search">Search (merchant/category)</label>
+            <input id="search" type="text" placeholder="e.g., uber, groceries, rent" />
+          </div>
+          <div style="margin-top: 18px;">
+            <button id="searchBtn">Search</button>
+          </div>
+          <div class="muted" id="searchStatus" style="margin-top: 18px;"></div>
+        </div>
+        <table id="txTable" style="margin-top:10px;">
+          <thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    const API_BASE = (localStorage.getItem("API_BASE") || "http://localhost:5050").replace(/\/$/, "");
+    document.getElementById("apiBasePill").textContent = API_BASE;
+
+    const fmt = (n) => new Intl.NumberFormat(undefined, { style: "currency", currency: "CAD" }).format(n);
+    let catChart = null;
+
+    async function api(path, opts) {
+      const r = await fetch(API_BASE + path, opts);
+      if (!r.ok) {
+        let msg = "Request failed";
+        try { const j = await r.json(); msg = j.error || msg; } catch {}
+        throw new Error(msg);
+      }
+      return r.json();
+    }
+
+    async function refreshSummary() {
+      const s = await api("/api/summary");
+      document.getElementById("incomeVal").textContent = fmt(s.totals.income);
+      document.getElementById("spendVal").textContent = fmt(s.totals.spending);
+      document.getElementById("netVal").textContent = fmt(s.totals.net);
+      document.getElementById("countVal").textContent = s.count;
+      document.getElementById("dateRange").textContent = s.dateRange.minDate ? `Date range: ${s.dateRange.minDate} → ${s.dateRange.maxDate}` : "No data yet.";
+
+      const tbody = document.querySelector("#merchantTable tbody");
+      tbody.innerHTML = "";
+      (s.topMerchants || []).forEach(m => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${escapeHtml(m.description)}</td><td>${fmt(Number(m.total))}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function refreshCategories() {
+      const c = await api("/api/categories");
+      const labels = c.categories.map(x => x.category);
+      const spending = c.categories.map(x => Number(x.spending || 0));
+
+      const ctx = document.getElementById("catChart").getContext("2d");
+      if (catChart) catChart.destroy();
+      catChart = new Chart(ctx, {
+        type: "bar",
+        data: { labels, datasets: [{ label: "Spending", data: spending }] },
+        options: { responsive: true, plugins: { legend: { display: false } } }
+      });
+    }
+
+    async function refreshAnomalies() {
+      const z = document.getElementById("zInput").value.trim() || "2.5";
+      const a = await api(`/api/anomalies?z=${encodeURIComponent(z)}`);
+      const tbody = document.querySelector("#anomalyTable tbody");
+      tbody.innerHTML = "";
+      (a.anomalies || []).forEach(x => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${x.date}</td>
+          <td>${escapeHtml(x.description)}</td>
+          <td><span class="pill">${escapeHtml(x.category)}</span></td>
+          <td>${fmt(Number(x.spending))}</td>
+          <td>${Number(x.zScore).toFixed(2)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function searchTx() {
+      const q = document.getElementById("search").value.trim();
+      const s = await api(`/api/transactions?search=${encodeURIComponent(q)}&limit=25&offset=0`);
+      document.getElementById("searchStatus").textContent = `${s.items.length} results`;
+      const tbody = document.querySelector("#txTable tbody");
+      tbody.innerHTML = "";
+      s.items.forEach(x => {
+        const tr = document.createElement("tr");
+        const amt = Number(x.amount);
+        tr.innerHTML = `
+          <td>${x.date}</td>
+          <td>${escapeHtml(x.description)}</td>
+          <td><span class="pill">${escapeHtml(x.category)}</span></td>
+          <td class="${amt < 0 ? "" : "ok"}">${fmt(amt)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+    }
+
+    document.getElementById("uploadBtn").addEventListener("click", async () => {
+      const file = document.getElementById("file").files[0];
+      const status = document.getElementById("uploadStatus");
+      const err = document.getElementById("uploadError");
+      err.textContent = "";
+      if (!file) { err.textContent = "Please choose a CSV file."; return; }
+      status.textContent = "Uploading…";
+      try {
+        const fd = new FormData();
+        fd.append("file", file);
+        const result = await api("/api/upload", { method: "POST", body: fd });
+        status.textContent = `Uploaded. Inserted: ${result.inserted}, Rejected: ${result.rejected}`;
+        await refreshAll();
+      } catch (e) {
+        status.textContent = "";
+        err.textContent = e.message;
+      }
+    });
+
+    document.getElementById("anomalyBtn").addEventListener("click", refreshAnomalies);
+    document.getElementById("searchBtn").addEventListener("click", searchTx);
+
+    async function refreshAll() {
+      try {
+        await refreshSummary();
+        await refreshCategories();
+        await refreshAnomalies();
+        await searchTx();
+      } catch (e) {}
+    }
+
+    refreshAll();
+  </script>
+</body>
+</html>

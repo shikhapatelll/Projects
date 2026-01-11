@@ -1,0 +1,246 @@
+date,description,amount,category
+2025-10-01,Bell Mobility,-51.41,Bills
+2025-10-02,Bell Mobility,-78.48,Bills
+2025-10-02,Starbucks,-6.91,Food & Drink
+2025-10-03,Rent,-778.72,Housing
+2025-10-04,Refund,27.06,Income
+2025-10-04,Bell Mobility,-94.5,Bills
+2025-10-04,Amazon,-58.15,Shopping
+2025-10-05,Payroll,1520.36,Income
+2025-10-06,Bell Mobility,-77.33,Bills
+2025-10-06,Starbucks,-4.22,Food & Drink
+2025-10-07,Metro Grocery,-71.07,Groceries
+2025-10-07,Amazon,-38.81,Shopping
+2025-10-08,Gym Membership,-25.15,Subscriptions
+2025-10-08,Refund,25.0,Income
+2025-10-09,Bell Mobility,-61.19,Bills
+2025-10-10,Pharmacy,-33.3,Health
+2025-10-11,Pharmacy,-22.92,Health
+2025-10-12,Uber,-20.14,Transport
+2025-10-13,Payroll,1417.53,Income
+2025-10-13,Netflix,-11.04,Subscriptions
+2025-10-13,Gym Membership,-40.85,Subscriptions
+2025-10-14,Starbucks,-8.97,Food & Drink
+2025-10-15,Hydro One,-72.39,Bills
+2025-10-15,Amazon,-35.26,Shopping
+2025-10-16,Pharmacy,-19.76,Health
+2025-10-16,Refund,27.81,Income
+2025-10-16,Refund,26.74,Income
+2025-10-17,Gym Membership,-26.84,Subscriptions
+2025-10-17,Refund,22.95,Income
+2025-10-17,Rent,-620.48,Housing
+2025-10-18,Pharmacy,-28.44,Health
+2025-10-18,Uber,-17.19,Transport
+2025-10-18,Bell Mobility,-53.39,Bills
+2025-10-19,Starbucks,-5.93,Food & Drink
+2025-10-20,Starbucks,-6.7,Food & Drink
+2025-10-20,Gym Membership,-27.67,Subscriptions
+2025-10-20,Payroll,1867.98,Income
+2025-10-21,Gym Membership,-37.78,Subscriptions
+2025-10-21,Pharmacy,-20.5,Health
+2025-10-22,Netflix,-12.57,Subscriptions
+2025-10-22,Hydro One,-78.21,Bills
+2025-10-23,Netflix,-22.9,Subscriptions
+2025-10-23,Rent,-1230.39,Housing
+2025-10-24,Payroll,1307.2,Income
+2025-10-24,Metro Grocery,-37.48,Groceries
+2025-10-24,Bell Mobility,-115.69,Bills
+2025-10-25,Hydro One,-69.24,Bills
+2025-10-26,Rent,-1244.65,Housing
+2025-10-26,Gym Membership,-50.55,Subscriptions
+2025-10-27,Refund,20.95,Income
+2025-10-27,Amazon,-50.2,Shopping
+2025-10-27,Starbucks,-9.24,Food & Drink
+2025-10-28,Uber,-17.56,Transport
+2025-10-28,Uber,-12.53,Transport
+2025-10-29,Hydro One,-41.9,Bills
+2025-10-29,Bell Mobility,-70.62,Bills
+2025-10-30,Starbucks,-5.95,Food & Drink
+2025-10-30,Amazon,-43.98,Shopping
+2025-10-30,Bell Mobility,-65.83,Bills
+2025-10-31,Bell Mobility,-72.23,Bills
+2025-11-01,Refund,20.79,Income
+2025-11-02,Bell Mobility,-52.95,Bills
+2025-11-03,Metro Grocery,-45.35,Groceries
+2025-11-03,Netflix,-20.53,Subscriptions
+2025-11-04,Refund,29.54,Income
+2025-11-04,Starbucks,-7.09,Food & Drink
+2025-11-04,Refund,23.46,Income
+2025-11-05,Payroll,1355.32,Income
+2025-11-05,Hydro One,-74.94,Bills
+2025-11-05,Hydro One,-62.6,Bills
+2025-11-06,Hydro One,-77.62,Bills
+2025-11-06,Netflix,-11.57,Subscriptions
+2025-11-07,Amazon,-58.7,Shopping
+2025-11-07,Bell Mobility,-112.33,Bills
+2025-11-07,Payroll,1588.29,Income
+2025-11-08,Pharmacy,-28.82,Health
+2025-11-08,Payroll,1432.93,Income
+2025-11-08,Rent,-803.26,Housing
+2025-11-09,Metro Grocery,-45.28,Groceries
+2025-11-10,Rent,-551.77,Housing
+2025-11-10,Hydro One,-389.36,Bills
+2025-11-10,Uber,-19.41,Transport
+2025-11-11,Payroll,1513.87,Income
+2025-11-11,Amazon,-54.89,Shopping
+2025-11-12,Rent,-637.79,Housing
+2025-11-13,Bell Mobility,-102.14,Bills
+2025-11-13,Starbucks,-62.32,Food & Drink
+2025-11-13,Starbucks,-9.22,Food & Drink
+2025-11-14,Pharmacy,-21.3,Health
+2025-11-14,Hydro One,-72.03,Bills
+2025-11-15,Netflix,-14.52,Subscriptions
+2025-11-15,Rent,-1178.09,Housing
+2025-11-15,Netflix,-14.59,Subscriptions
+2025-11-16,Refund,22.13,Income
+2025-11-17,Refund,21.46,Income
+2025-11-17,Rent,-1247.49,Housing
+2025-11-18,Gym Membership,-54.63,Subscriptions
+2025-11-18,Bell Mobility,-103.44,Bills
+2025-11-18,Refund,20.72,Income
+2025-11-19,Uber,-14.37,Transport
+2025-11-19,Rent,-886.36,Housing
+2025-11-20,Starbucks,-6.64,Food & Drink
+2025-11-20,Bell Mobility,-76.77,Bills
+2025-11-20,Payroll,1833.84,Income
+2025-11-21,Gym Membership,-34.33,Subscriptions
+2025-11-21,Payroll,1824.26,Income
+2025-11-22,Hydro One,-74.79,Bills
+2025-11-22,Bell Mobility,-69.76,Bills
+2025-11-23,Bell Mobility,-100.24,Bills
+2025-11-23,Bell Mobility,-82.35,Bills
+2025-11-23,Starbucks,-7.2,Food & Drink
+2025-11-24,Metro Grocery,-32.96,Groceries
+2025-11-24,Metro Grocery,-80.21,Groceries
+2025-11-24,Uber,-26.95,Transport
+2025-11-25,Amazon,-59.83,Shopping
+2025-11-25,Rent,-1074.14,Housing
+2025-11-26,Amazon,-31.91,Shopping
+2025-11-26,Payroll,1859.57,Income
+2025-11-27,Payroll,1485.17,Income
+2025-11-28,Hydro One,-80.69,Bills
+2025-11-28,Metro Grocery,-34.51,Groceries
+2025-11-29,Uber,-14.17,Transport
+2025-11-30,Hydro One,-48.88,Bills
+2025-11-30,Gym Membership,-34.99,Subscriptions
+2025-11-30,Uber,-22.26,Transport
+2025-12-01,Netflix,-23.95,Subscriptions
+2025-12-01,Hydro One,-88.72,Bills
+2025-12-02,Hydro One,-71.85,Bills
+2025-12-02,Pharmacy,-15.56,Health
+2025-12-03,Rent,-1051.71,Housing
+2025-12-03,Pharmacy,-17.07,Health
+2025-12-04,Bell Mobility,-103.84,Bills
+2025-12-04,Netflix,-12.35,Subscriptions
+2025-12-05,Gym Membership,-234.96,Subscriptions
+2025-12-05,Refund,23.83,Income
+2025-12-05,Hydro One,-83.78,Bills
+2025-12-06,Rent,-788.98,Housing
+2025-12-06,Hydro One,-76.56,Bills
+2025-12-07,Starbucks,-6.03,Food & Drink
+2025-12-08,Payroll,1864.1,Income
+2025-12-09,Payroll,1694.64,Income
+2025-12-10,Gym Membership,-29.98,Subscriptions
+2025-12-10,Refund,21.48,Income
+2025-12-11,Pharmacy,-31.31,Health
+2025-12-11,Uber,-22.09,Transport
+2025-12-11,Bell Mobility,-95.35,Bills
+2025-12-12,Uber,-19.38,Transport
+2025-12-12,Gym Membership,-54.01,Subscriptions
+2025-12-13,Hydro One,-46.28,Bills
+2025-12-13,Starbucks,-5.27,Food & Drink
+2025-12-14,Hydro One,-43.16,Bills
+2025-12-14,Starbucks,-7.09,Food & Drink
+2025-12-15,Payroll,1888.66,Income
+2025-12-16,Bell Mobility,-105.3,Bills
+2025-12-16,Netflix,-18.43,Subscriptions
+2025-12-16,Hydro One,-58.97,Bills
+2025-12-17,Amazon,-30.5,Shopping
+2025-12-17,Rent,-1031.91,Housing
+2025-12-18,Starbucks,-7.81,Food & Drink
+2025-12-18,Hydro One,-53.02,Bills
+2025-12-18,Uber,-14.05,Transport
+2025-12-19,Amazon,-30.96,Shopping
+2025-12-19,Hydro One,-39.05,Bills
+2025-12-20,Payroll,1660.88,Income
+2025-12-20,Refund,29.59,Income
+2025-12-20,Gym Membership,-46.0,Subscriptions
+2025-12-21,Netflix,-12.6,Subscriptions
+2025-12-21,Uber,-26.56,Transport
+2025-12-21,Netflix,-12.94,Subscriptions
+2025-12-22,Uber,-16.8,Transport
+2025-12-23,Gym Membership,-55.44,Subscriptions
+2025-12-23,Netflix,-21.94,Subscriptions
+2025-12-24,Pharmacy,-30.58,Health
+2025-12-24,Refund,25.65,Income
+2025-12-25,Gym Membership,-52.45,Subscriptions
+2025-12-25,Pharmacy,-24.56,Health
+2025-12-26,Amazon,-27.53,Shopping
+2025-12-26,Refund,20.38,Income
+2025-12-26,Bell Mobility,-115.55,Bills
+2025-12-27,Refund,23.81,Income
+2025-12-28,Gym Membership,-58.09,Subscriptions
+2025-12-29,Bell Mobility,-96.54,Bills
+2025-12-30,Hydro One,-77.71,Bills
+2025-12-30,Gym Membership,-49.65,Subscriptions
+2025-12-31,Hydro One,-40.88,Bills
+2026-01-01,Netflix,-13.46,Subscriptions
+2026-01-01,Uber,-22.63,Transport
+2026-01-02,Rent,-674.7,Housing
+2026-01-02,Bell Mobility,-98.82,Bills
+2026-01-03,Payroll,1286.08,Income
+2026-01-03,Bell Mobility,-66.11,Bills
+2026-01-03,Uber,-24.38,Transport
+2026-01-04,Payroll,1857.12,Income
+2026-01-04,Refund,25.64,Income
+2026-01-05,Pharmacy,-26.18,Health
+2026-01-06,Netflix,-23.9,Subscriptions
+2026-01-06,Hydro One,-71.03,Bills
+2026-01-07,Starbucks,-5.29,Food & Drink
+2026-01-08,Starbucks,-5.59,Food & Drink
+2026-01-09,Uber,-11.58,Transport
+2026-01-09,Refund,27.02,Income
+2026-01-09,Payroll,1665.21,Income
+2026-01-10,Payroll,1462.61,Income
+2026-01-10,Starbucks,-8.77,Food & Drink
+2026-01-11,Starbucks,-6.12,Food & Drink
+2026-01-11,Pharmacy,-28.66,Health
+2026-01-11,Starbucks,-9.1,Food & Drink
+2026-01-12,Bell Mobility,-59.3,Bills
+2026-01-13,Gym Membership,-49.1,Subscriptions
+2026-01-13,Rent,-856.73,Housing
+2026-01-14,Bell Mobility,-61.77,Bills
+2026-01-15,Amazon,-61.89,Shopping
+2026-01-15,Pharmacy,-30.51,Health
+2026-01-15,Pharmacy,-21.37,Health
+2026-01-16,Gym Membership,-43.39,Subscriptions
+2026-01-16,Rent,-898.34,Housing
+2026-01-17,Metro Grocery,-39.14,Groceries
+2026-01-17,Pharmacy,-26.08,Health
+2026-01-18,Starbucks,-8.85,Food & Drink
+2026-01-18,Netflix,-13.89,Subscriptions
+2026-01-19,Hydro One,-74.97,Bills
+2026-01-19,Netflix,-21.95,Subscriptions
+2026-01-19,Amazon,-51.21,Shopping
+2026-01-20,Amazon,-62.84,Shopping
+2026-01-20,Refund,20.85,Income
+2026-01-20,Pharmacy,-33.04,Health
+2026-01-21,Hydro One,-78.24,Bills
+2026-01-21,Metro Grocery,-46.28,Groceries
+2026-01-21,Metro Grocery,-74.29,Groceries
+2026-01-22,Netflix,-23.07,Subscriptions
+2026-01-23,Hydro One,-82.18,Bills
+2026-01-23,Amazon,-30.37,Shopping
+2026-01-23,Payroll,1442.52,Income
+2026-01-24,Metro Grocery,-37.88,Groceries
+2026-01-24,Uber,-13.86,Transport
+2026-01-24,Metro Grocery,-42.26,Groceries
+2026-01-25,Bell Mobility,-105.33,Bills
+2026-01-25,Metro Grocery,-79.78,Groceries
+2026-01-25,Metro Grocery,-76.96,Groceries
+2026-01-26,Uber,-11.08,Transport
+2026-01-26,Amazon,-35.27,Shopping
+2026-01-26,Netflix,-11.54,Subscriptions
+2026-01-27,Refund,20.69,Income
+2026-01-27,Rent,-1262.58,Housing
+2026-01-28,Hydro One,-89.04,Bills

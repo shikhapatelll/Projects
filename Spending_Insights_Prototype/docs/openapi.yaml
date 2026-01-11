@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Spending Insights Prototype API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5050
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      responses:
+        '200': { description: OK }
+  /api/upload:
+    post:
+      summary: Upload a transactions CSV
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file: { type: string, format: binary }
+      responses:
+        '200': { description: Upload result }
+  /api/summary:
+    get:
+      summary: High-level totals and key metrics
+      responses:
+        '200': { description: Summary object }
+  /api/categories:
+    get:
+      summary: Category totals
+      responses:
+        '200': { description: Category list }
+  /api/anomalies:
+    get:
+      summary: Outlier transactions (z-score) by category
+      parameters:
+        - in: query
+          name: z
+          schema: { type: number, default: 2.5 }
+      responses:
+        '200': { description: Anomalies list }
+  /api/transactions:
+    get:
+      summary: List transactions (search + pagination)
+      parameters:
+        - in: query
+          name: search
+          schema: { type: string }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50 }
+        - in: query
+          name: offset
+          schema: { type: integer, default: 0 }
+      responses:
+        '200': { description: Transactions list }
