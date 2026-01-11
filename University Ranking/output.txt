@@ -1,0 +1,8 @@
+Total number of universities => 100
+Available countries => JAPAN, NETHERLANDS, SINGAPORE, SOUTH KOREA, TAIWAN, USA, GERMANY, NORWAY, SWITZERLAND, SWEDEN, AUSTRALIA, UNITED KINGDOM, DENMARK, CHINA, CANADA, ISRAEL, FRANCE
+Available continents => NORTH AMERICA, AFRICA, EUROPE, ASIA, AUSTRALIA
+At international rank => 13 the university name is => University of TokyoAt national rank => 1 the university name is => Kyoto University
+The average score => 85.35%
+The relative score to the top university in ASIA is => (85.35 / 89.8) x 100% = 95.0445434298441%
+The capital is => TokyoThe universities that contain the capital name => 
+  #1 UNIVERSITY OF TOKYO
