@@ -1,0 +1,48 @@
+CS3307 Individual Assignment:- Simple File Manager
+Name Shikha Patel
+Date Jan 2026, Last Modified Feb 2026
+
+Overview:-
+This project implements a simplified graphical file manager using wxWidgets. It supports:-
+  Browsing directories (editable path bar)
+  File listing with properties (name/type/size/last modified)
+  Open (double-click or Enter)
+  New folder, rename, delete
+  Copy, cut, paste (virtual clipboard) with overwrite prompt
+  Refresh and exit
+  Keyboard shortcuts for all operations
+
+Build:-
+  make
+
+Run:-
+  ./filemanager
+
+Notes:-
+Requires wxWidgets (wx-config must be available).
+Uses C++17 filesystem.
+Single-selection list.
+Copy/Cut/Paste uses a "virtual clipboard" (stores only one selected path and a mode).
+The list may include ".." to navigate to the parent directory.
+Double-click or Enter to open
+Directory:- navigates into it
+File:- opens with system default app
+
+Controls / Shortcuts:-
+  Enter/Double-click   Open selected item
+  Ctrl+N                 New folder
+  F2                     Rename
+  Del                    Delete
+  Ctrl+C                 Copy
+  Ctrl+X                 Cut
+  Ctrl+V                 Paste
+  F5                     Refresh
+  Ctrl+Q                 Exit
+
+Attributions:-
+Date/time conversion for std::filesystem timestamps may follow common cross-platform patterns.
+
+
+Troubleshooting notes:
+On minimal Linux/SSH environments, "Open" depends on system default applications. If no desktop apps are installed, you may see warnings or an error dialog; this still indicates the open attempt was made.
+macOS (XQuartz/X11 forwarding): If the GUI opens but you see GLX/fbConfigs warnings, run: LIBGL_ALWAYS_INDIRECT=1 ./filemanager
