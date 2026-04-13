@@ -1,4 +1,4 @@
-# Power BI — University Rankings Insights Dashboard (Portfolio Kit)
+# Power BI — University Rankings Insights Dashboard
 
 This is a **mini portfolio project** showing end-to-end analytics workflow:
 **clean dataset → measures (DAX) → interactive dashboard design**.
@@ -21,7 +21,7 @@ This is a **mini portfolio project** showing end-to-end analytics workflow:
 ![](visuals/universities_by_continent.png)
 ![](visuals/score_vs_research_rank.png)
 
-## Resume bullets (you can reuse)
+## Resume bullets 
 - Built a Power BI dashboard from a cleaned university rankings dataset, including interactive slicers, KPI cards, and summary visuals.
 - Created DAX measures and derived metrics (country averages, deltas, anomaly flags) to support trend and outlier analysis.
 - Documented the build steps and produced reproducible visuals/insights for stakeholder-friendly reporting.
