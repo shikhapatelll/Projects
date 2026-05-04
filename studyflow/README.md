@@ -1,4 +1,4 @@
-# StudyFlow (CS3307) — Final Submission
+# StudyFlow console based app
 
 StudyFlow is a console-based C++ study planner that helps students create accounts, manage study items, auto-generate study sessions, track completed work, and view reminders and analytics.
 
