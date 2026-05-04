@@ -1,0 +1,1 @@
+Run "doxygen dox.config" from the project root to generate the required HTML documentation here.
