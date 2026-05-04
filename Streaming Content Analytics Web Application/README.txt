@@ -1,4 +1,4 @@
-CS3319 Assignment 3 Completed Solution
+I built a PHP/MySQL streaming content analytics web application that supports content browsing, CRUD operations, ratings, viewing history filters, subscription plan updates, and a clear user interface.
 
 Folder contents:
 - mainmenu.php
@@ -20,7 +20,7 @@ Folder contents:
 
 
 Notes:
-- solution uses exact Assignment 2 schema:
+- solution uses class schema:
   subscription_plans, users, content, episodes, profile, watches, rates
 - Content ID is never editable during updates.
 - Ratings are updated if the user already rated that content.
