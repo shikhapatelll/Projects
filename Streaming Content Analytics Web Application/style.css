@@ -1,0 +1,152 @@
+/* Base page styling starts here so the whole site looks clean and readable. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: #f4f7fb;
+    margin: 0;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    color: #1f2937;
+}
+.wrapper {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    max-width: 1100px;
+    margin: 0 auto;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: white;
+    min-height: 100vh;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+header {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: #1d4ed8;
+    color: white;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    padding: 24px;
+}
+header h1 { margin: 0 0 6px 0; }
+nav {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: #dbeafe;
+    padding: 12px 18px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    display: flex;
+    flex-wrap: wrap;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    gap: 10px;
+}
+nav a {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    text-decoration: none;
+    color: #1e3a8a;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    font-weight: bold;
+    padding: 8px 12px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border-radius: 6px;
+}
+nav a:hover { background: #bfdbfe; }
+main { padding: 24px; }
+footer {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    text-align: center;
+    padding: 20px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    color: #4b5563;
+    border-top: 1px solid #e5e7eb;
+}
+/* Styling block for this part of the layout. */
+section, .card {
+    border: 1px solid #e5e7eb;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border-radius: 10px;
+    padding: 18px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    margin-bottom: 20px;
+    background: #fff;
+}
+/* Styling block for this part of the layout. */
+.grid {
+    display: grid;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+/* Styling block for this part of the layout. */
+label {
+    display: block;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    margin-top: 10px;
+    margin-bottom: 4px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    font-weight: 600;
+}
+input, select, button {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    width: 100%;
+    padding: 10px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    box-sizing: border-box;
+}
+button, .button-link {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: #2563eb;
+    color: white;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border: none;
+    cursor: pointer;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    margin-top: 12px;
+    text-decoration: none;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    display: inline-block;
+    width: auto;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    padding: 10px 16px;
+}
+button.danger, .button-link.danger { background: #dc2626; }
+button.secondary, .button-link.secondary { background: #6b7280; }
+table {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    width: 100%;
+    border-collapse: collapse;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    margin-top: 12px;
+}
+th, td {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    text-align: left;
+}
+th { background: #eff6ff; }
+.flash {
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    background: #dcfce7;
+    color: #166534;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    padding: 12px;
+    border-radius: 8px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border: 1px solid #86efac;
+    margin-bottom: 16px;
+}
+/* Styling block for this part of the layout. */
+.error {
+    background: #fee2e2;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    color: #991b1b;
+    padding: 12px;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    border-radius: 8px;
+    border: 1px solid #fca5a5;
+/* This CSS rule tweaks one visual detail like spacing, size, or color. */
+    margin-bottom: 16px;
+}
+.inline-form { display: inline-block; margin-right: 8px; }
+.small { color: #6b7280; font-size: 0.95rem; }
+.actions a { margin-right: 6px; }
